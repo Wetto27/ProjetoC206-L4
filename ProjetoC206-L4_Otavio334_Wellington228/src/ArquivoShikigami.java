@@ -23,6 +23,7 @@ public class ArquivoShikigami {
             bw.write(sombra.shikigami.getNome()+"\n");
             bw.write(sombra.shikigami.isExorcizado()+"\n");
             bw.write(sombra.shikigami.isTotalidade()+"\n");
+            bw.write(sombra.shikigami.isDestruido()+"\n");
 
         } catch (IOException e) {
             System.out.println("ERRO: " + e);
@@ -67,6 +68,7 @@ public class ArquivoShikigami {
                     auxShikigami.shikigami.setNome(br.readLine());
                     auxShikigami.shikigami.setExorcizado(Boolean.parseBoolean(br.readLine()));
                     auxShikigami.shikigami.setTotalidade(Boolean.parseBoolean(br.readLine()));
+                    auxShikigami.shikigami.setDestruido(Boolean.parseBoolean(br.readLine()));
 
                     // Adicionando a ferramenta ao arrayList, para informar que encontrei a ferramenta
                     encontreiNoArquivo.add(auxShikigami);

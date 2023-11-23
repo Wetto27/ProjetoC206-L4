@@ -3,6 +3,7 @@ public class Shikigami {
     private String nome;
     private boolean exorcizado;
     private boolean totalidade;
+    private boolean destruido;
 
     public String getNome() {
         return nome;
@@ -26,5 +27,13 @@ public class Shikigami {
 
     public void setTotalidade(boolean totalidade) {
         this.totalidade = totalidade;
+    }
+
+    public boolean isDestruido() {
+        return destruido;
+    }
+
+    public void setDestruido(boolean destruido) {
+        this.destruido = destruido;
     }
 }

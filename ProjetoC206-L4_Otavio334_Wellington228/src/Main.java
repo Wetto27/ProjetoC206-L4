@@ -27,30 +27,43 @@ public class Main {
         dezSombras1.shikigami.setNome("Cães divinos");
         dezSombras1.shikigami.setExorcizado(true);
         dezSombras1.shikigami.setTotalidade(true);
+        dezSombras1.shikigami.setDestruido(false);
         dezSombras2.shikigami.setNome("Nue");
         dezSombras2.shikigami.setExorcizado(false);
         dezSombras2.shikigami.setTotalidade(false);
+        dezSombras2.shikigami.setDestruido(false);
         dezSombras3.shikigami.setNome("Sapo");
         dezSombras3.shikigami.setExorcizado(false);
         dezSombras3.shikigami.setTotalidade(false);
+        dezSombras3.shikigami.setDestruido(false);
         dezSombras4.shikigami.setNome("Orochi");
         dezSombras4.shikigami.setExorcizado(false);
         dezSombras4.shikigami.setTotalidade(false);
+        dezSombras4.shikigami.setDestruido(false);
         dezSombras5.shikigami.setNome("Elefante abundante");
         dezSombras5.shikigami.setExorcizado(false);
         dezSombras5.shikigami.setTotalidade(false);
+        dezSombras5.shikigami.setDestruido(false);
         dezSombras6.shikigami.setNome("Fuga do coelho");
         dezSombras6.shikigami.setExorcizado(false);
         dezSombras6.shikigami.setTotalidade(false);
+        dezSombras6.shikigami.setDestruido(false);
         dezSombras7.shikigami.setNome("Cervo circular");
         dezSombras7.shikigami.setExorcizado(false);
         dezSombras7.shikigami.setTotalidade(false);
+        dezSombras7.shikigami.setDestruido(false);
         dezSombras8.shikigami.setNome("Tigre mórbido");
         dezSombras8.shikigami.setExorcizado(false);
         dezSombras8.shikigami.setTotalidade(false);
-        dezSombras9.shikigami.setNome("Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga");
+        dezSombras8.shikigami.setDestruido(false);
+        dezSombras9.shikigami.setNome("Touro perfurante");
         dezSombras9.shikigami.setExorcizado(false);
         dezSombras9.shikigami.setTotalidade(false);
+        dezSombras9.shikigami.setDestruido(false);
+        dezSombras10.shikigami.setNome("Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga");
+        dezSombras10.shikigami.setExorcizado(false);
+        dezSombras10.shikigami.setTotalidade(false);
+        dezSombras10.shikigami.setDestruido(false);
 
         // Escrevendo os shikigamis no arquivo
         arq1.escrever(dezSombras1);
@@ -113,26 +126,6 @@ public class Main {
                     }
                     break;
                 case 3:
-                    String nomeBusca;
-                    System.out.println("Nome da ferramenta a ser buscada: ");
-                    nomeBusca = sc.nextLine();
-                    for (int i = 0; i < sombras.size(); i++) {
-                        if (sombras.get(i).ferramentaAmaldicoada.getNome().equals(nomeBusca)) {
-                            System.out.println("Nome: ");
-                            sombras.get(i).ferramentaAmaldicoada.setNome(sc.nextLine());
-                            System.out.println("Efeito: ");
-                            sombras.get(i).ferramentaAmaldicoada.setEfeito(sc.nextLine());
-                            try {
-                                System.out.println("Nível (Desconhecido, 4, 3, 2, 1, Especial): ");
-                                sombras.get(i).ferramentaAmaldicoada.setNivel(sc.nextLine());
-                                if (!dezSombras.ferramentaAmaldicoada.getNivel().equals("Desconhecido") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("4") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("3") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("2") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("1") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("Especial")) {
-                                    throw new DadoInvalidoException();
-                                }
-                            } catch (java.lang.Exception e) {
-                                break; // Parando a execução de salvar os valores
-                            }
-                        }
-                    }
 
                     break;
                 case 4:

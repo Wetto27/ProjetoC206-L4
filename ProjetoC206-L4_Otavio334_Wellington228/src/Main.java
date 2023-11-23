@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,7 +7,8 @@ public class Main {
     public static void main(String[] args) {
 
         // Criando um objeto de Arquivo
-        Arquivo arq = new Arquivo();
+        ArquivoShikigami arq1 = new ArquivoShikigami();
+        ArquivoFerramenta arq2 = new ArquivoFerramenta();
 
         //Criando objetos de DezSombras
         DezSombras dezSombras = new DezSombras();
@@ -32,40 +32,37 @@ public class Main {
         dezSombras2.shikigami.setTotalidade(false);
         dezSombras3.shikigami.setNome("Sapo");
         dezSombras3.shikigami.setExorcizado(false);
-        dezSombras2.shikigami.setTotalidade(false);
-        dezSombras4.shikigami.setNome("Nue");
+        dezSombras3.shikigami.setTotalidade(false);
+        dezSombras4.shikigami.setNome("Orochi");
         dezSombras4.shikigami.setExorcizado(false);
         dezSombras4.shikigami.setTotalidade(false);
-        dezSombras5.shikigami.setNome("Orochi");
+        dezSombras5.shikigami.setNome("Elefante abundante");
         dezSombras5.shikigami.setExorcizado(false);
         dezSombras5.shikigami.setTotalidade(false);
-        dezSombras6.shikigami.setNome("Elefante abundante");
+        dezSombras6.shikigami.setNome("Fuga do coelho");
         dezSombras6.shikigami.setExorcizado(false);
         dezSombras6.shikigami.setTotalidade(false);
-        dezSombras7.shikigami.setNome("Fuga do coelho");
+        dezSombras7.shikigami.setNome("Cervo circular");
         dezSombras7.shikigami.setExorcizado(false);
         dezSombras7.shikigami.setTotalidade(false);
-        dezSombras8.shikigami.setNome("Cervo circular");
+        dezSombras8.shikigami.setNome("Tigre mórbido");
         dezSombras8.shikigami.setExorcizado(false);
         dezSombras8.shikigami.setTotalidade(false);
-        dezSombras9.shikigami.setNome("Tigre mórbido");
+        dezSombras9.shikigami.setNome("Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga");
         dezSombras9.shikigami.setExorcizado(false);
         dezSombras9.shikigami.setTotalidade(false);
-        dezSombras10.shikigami.setNome("Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga");
-        dezSombras10.shikigami.setExorcizado(false);
-        dezSombras10.shikigami.setTotalidade(false);
 
         // Escrevendo os shikigamis no arquivo
-        arq.escrever(dezSombras1);
-        arq.escrever(dezSombras2);
-        arq.escrever(dezSombras3);
-        arq.escrever(dezSombras4);
-        arq.escrever(dezSombras5);
-        arq.escrever(dezSombras6);
-        arq.escrever(dezSombras7);
-        arq.escrever(dezSombras8);
-        arq.escrever(dezSombras9);
-        arq.escrever(dezSombras10);
+        arq1.escrever(dezSombras1);
+        arq1.escrever(dezSombras2);
+        arq1.escrever(dezSombras3);
+        arq1.escrever(dezSombras4);
+        arq1.escrever(dezSombras5);
+        arq1.escrever(dezSombras6);
+        arq1.escrever(dezSombras7);
+        arq1.escrever(dezSombras8);
+        arq1.escrever(dezSombras9);
+        arq1.escrever(dezSombras10);
 
         // Criando uma estrutura para entrada de dados
         Scanner sc = new Scanner(System.in);
@@ -86,7 +83,7 @@ public class Main {
 
             int op = sc.nextInt();
             sc.nextLine();
-            ArrayList<DezSombras> sombras = arq.ler();
+            ArrayList<DezSombras> sombras = arq2.ler();
             // Menu
             switch (op) {
 
@@ -103,12 +100,10 @@ public class Main {
                     } catch (java.lang.Exception e) {
                         break; // Parando a execução de salvar os valores
                     }
-                    id += 1;
-                    dezSombras.ferramentaAmaldicoada.setId(id);
                     System.out.println("Efeito: ");
                     dezSombras.ferramentaAmaldicoada.setEfeito(sc.nextLine());
                     // Escrevendo a ferramenta no arquivo
-                    arq.escrever(dezSombras);
+                    arq2.escrever(dezSombras);
                     break;
                 case 2:
                     // Executar o método de leitura

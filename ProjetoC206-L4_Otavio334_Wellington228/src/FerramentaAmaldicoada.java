@@ -2,13 +2,11 @@ public class FerramentaAmaldicoada  {
     private String nome;
     private String efeito;
     private String nivel;
-    private int id;
 
     public void mostrarInfos(){
         System.out.println("Nome: "+nome);
-        System.out.println("Propriedade mágica: "+ efeito);
         System.out.println("Nível: "+ nivel);
-        System.out.println("ID: "+id);
+        System.out.println("Efeito: "+ efeito);
         System.out.println(" ");
     }
 
@@ -34,13 +32,5 @@ public class FerramentaAmaldicoada  {
 
     public void setNivel(String nivel) {
         this.nivel = nivel;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 }

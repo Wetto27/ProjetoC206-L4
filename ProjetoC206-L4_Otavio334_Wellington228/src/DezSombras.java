@@ -1,6 +1,5 @@
 public class DezSombras {
 
-    private String usuario;
     Shikigami shikigami;
     FerramentaAmaldicoada ferramentaAmaldicoada;
 

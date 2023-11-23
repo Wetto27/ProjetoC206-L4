@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
-public class Arquivo {
+public class ArquivoShikigami {
     public void escrever(DezSombras sombra) {
         // Importando as classes que nos permitirão escrever no Arquivo
         OutputStream os = null;
@@ -10,7 +10,7 @@ public class Arquivo {
 
         try {
             // Recebe o nome do arquivo
-            os = new FileOutputStream("SOMBRA.txt", true); // Arquivo
+            os = new FileOutputStream("SombraShikigami.txt", true); // Arquivo
 
             // Mostra em qual arquivo estaremos escrevendo
             osw = new OutputStreamWriter(os);
@@ -19,11 +19,10 @@ public class Arquivo {
             bw = new BufferedWriter(osw);
 
             // Escrevendo os dados no arquivo
-            bw.write("--- SOMBRA ---\n"); // Flag
-            bw.write(sombra.getNome()+"\n");
-            bw.write(sombra.getEfeito()+"\n");
-            bw.write(sombra.getNivel()+"\n");
-            bw.write(sombra.getId()+"\n");
+            bw.write("--- SHIKIGAMI ---\n"); // Flag
+            bw.write(sombra.shikigami.getNome()+"\n");
+            bw.write(sombra.shikigami.isExorcizado()+"\n");
+            bw.write(sombra.shikigami.isTotalidade()+"\n");
 
         } catch (IOException e) {
             System.out.println("ERRO: " + e);
@@ -50,7 +49,7 @@ public class Arquivo {
         String linhaLer; // Auxiliar que servirá como ponteiro para ler o arquivo
 
         try {
-            is = new FileInputStream("SOMBRA.txt");
+            is = new FileInputStream("SombraShikigami.txt");
             isr = new InputStreamReader(is);
             br = new BufferedReader(isr);
 
@@ -61,29 +60,26 @@ public class Arquivo {
             // Verificando e rodando o código enquanto tiver informações no txt
             while (linhaLer != null) {
                 // Verificando se encontramos a flag que indica o início de um livro
-                if (linhaLer.contains("--- SOMBRA ---")) {
+                if (linhaLer.contains("--- SHIKIGAMI ---")) {
 
                     // Criando um objeto auxiliar de Livro
-                    FerramentaAmaldicoada auxFerramentaAmaldicoada = new FerramentaAmaldicoada();
-                    auxLivro.setTitulo(br.readLine());
-                    auxLivro.setGenLiterario(br.readLine());
-                    auxLivro.setEditora(br.readLine());
-                    auxLivro.setQtdFolhas(Integer.parseInt(br.readLine()));
-                    auxLivro.setAnoLancamento(Integer.parseInt(br.readLine()));
-                    auxLivro.setPreco(Double.parseDouble(br.readLine()));
+                    DezSombras auxShikigami = new DezSombras();
+                    auxShikigami.shikigami.setNome(br.readLine());
+                    auxShikigami.shikigami.setExorcizado(Boolean.parseBoolean(br.readLine()));
+                    auxShikigami.shikigami.setTotalidade(Boolean.parseBoolean(br.readLine()));
 
                     // Adicionando a ferramenta ao arrayList, para informar que encontrei a ferramenta
-                    encontreiNoArquivo.add(auxFerramentaAmaldicoada);
+                    encontreiNoArquivo.add(auxShikigami);
                 }
                 // Passando para a próxima linha
                 linhaLer = br.readLine();
             }
-        }catch(Exception e){
+        }catch(java.lang.Exception e){
             System.out.println("ERRO: "+e);
         }finally{
             try{
                 br.close();
-            }catch(Exception e){
+            }catch(java.lang.Exception e){
                 System.out.println("ERRO: "+e);
             }
         }

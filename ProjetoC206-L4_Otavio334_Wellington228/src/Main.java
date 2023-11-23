@@ -10,6 +10,63 @@ public class Main {
         // Criando um objeto de Arquivo
         Arquivo arq = new Arquivo();
 
+        //Criando objetos de DezSombras
+        DezSombras dezSombras = new DezSombras();
+        DezSombras dezSombras1 = new DezSombras();
+        DezSombras dezSombras2 = new DezSombras();
+        DezSombras dezSombras3 = new DezSombras();
+        DezSombras dezSombras4 = new DezSombras();
+        DezSombras dezSombras5 = new DezSombras();
+        DezSombras dezSombras6 = new DezSombras();
+        DezSombras dezSombras7 = new DezSombras();
+        DezSombras dezSombras8 = new DezSombras();
+        DezSombras dezSombras9 = new DezSombras();
+        DezSombras dezSombras10 = new DezSombras();
+
+        // Criando shikigamis
+        dezSombras1.shikigami.setNome("Cães divinos");
+        dezSombras1.shikigami.setExorcizado(true);
+        dezSombras1.shikigami.setTotalidade(true);
+        dezSombras2.shikigami.setNome("Nue");
+        dezSombras2.shikigami.setExorcizado(false);
+        dezSombras2.shikigami.setTotalidade(false);
+        dezSombras3.shikigami.setNome("Sapo");
+        dezSombras3.shikigami.setExorcizado(false);
+        dezSombras2.shikigami.setTotalidade(false);
+        dezSombras4.shikigami.setNome("Nue");
+        dezSombras4.shikigami.setExorcizado(false);
+        dezSombras4.shikigami.setTotalidade(false);
+        dezSombras5.shikigami.setNome("Orochi");
+        dezSombras5.shikigami.setExorcizado(false);
+        dezSombras5.shikigami.setTotalidade(false);
+        dezSombras6.shikigami.setNome("Elefante abundante");
+        dezSombras6.shikigami.setExorcizado(false);
+        dezSombras6.shikigami.setTotalidade(false);
+        dezSombras7.shikigami.setNome("Fuga do coelho");
+        dezSombras7.shikigami.setExorcizado(false);
+        dezSombras7.shikigami.setTotalidade(false);
+        dezSombras8.shikigami.setNome("Cervo circular");
+        dezSombras8.shikigami.setExorcizado(false);
+        dezSombras8.shikigami.setTotalidade(false);
+        dezSombras9.shikigami.setNome("Tigre mórbido");
+        dezSombras9.shikigami.setExorcizado(false);
+        dezSombras9.shikigami.setTotalidade(false);
+        dezSombras10.shikigami.setNome("Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga");
+        dezSombras10.shikigami.setExorcizado(false);
+        dezSombras10.shikigami.setTotalidade(false);
+
+        // Escrevendo os shikigamis no arquivo
+        arq.escrever(dezSombras1);
+        arq.escrever(dezSombras2);
+        arq.escrever(dezSombras3);
+        arq.escrever(dezSombras4);
+        arq.escrever(dezSombras5);
+        arq.escrever(dezSombras6);
+        arq.escrever(dezSombras7);
+        arq.escrever(dezSombras8);
+        arq.escrever(dezSombras9);
+        arq.escrever(dezSombras10);
+
         // Criando uma estrutura para entrada de dados
         Scanner sc = new Scanner(System.in);
 
@@ -17,8 +74,6 @@ public class Main {
         boolean executando = true;
 
         int id = 0;
-        // Criando um objeto de ferramenta
-        FerramentaAmaldicoada ferramentaAmaldicoada = new FerramentaAmaldicoada();
 
         while (executando) {
             // Menu de informações
@@ -31,51 +86,51 @@ public class Main {
 
             int op = sc.nextInt();
             sc.nextLine();
-            ArrayList<FerramentaAmaldicoada> ferramentas = arq.ler();
+            ArrayList<DezSombras> sombras = arq.ler();
             // Menu
             switch (op) {
 
                 case 1:
                     // Coletando as informações da ferramenta
                     System.out.println("Nome: ");
-                    ferramentaAmaldicoada.setNome(sc.nextLine());
+                    dezSombras.ferramentaAmaldicoada.setNome(sc.nextLine());
                     try {
                         System.out.println("Nível (Desconhecido, 4, 3, 2, 1, Especial): ");
-                        ferramentaAmaldicoada.setNivel(sc.nextLine());
-                        if (!ferramentaAmaldicoada.getNivel().equals("Desconhecido") && !ferramentaAmaldicoada.getNivel().equals("4") && !ferramentaAmaldicoada.getNivel().equals("3") && !ferramentaAmaldicoada.getNivel().equals("2") && !ferramentaAmaldicoada.getNivel().equals("1") && !ferramentaAmaldicoada.getNivel().equals("Especial")) {
+                        dezSombras.ferramentaAmaldicoada.setNivel(sc.nextLine());
+                        if (!dezSombras.ferramentaAmaldicoada.getNivel().equals("Desconhecido") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("4") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("3") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("2") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("1") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("Especial")) {
                             throw new DadoInvalidoException();
                         }
                     } catch (java.lang.Exception e) {
                         break; // Parando a execução de salvar os valores
                     }
                     id += 1;
-                    ferramentaAmaldicoada.setId(id);
+                    dezSombras.ferramentaAmaldicoada.setId(id);
                     System.out.println("Efeito: ");
-                    ferramentaAmaldicoada.setEfeito(sc.nextLine());
+                    dezSombras.ferramentaAmaldicoada.setEfeito(sc.nextLine());
                     // Escrevendo a ferramenta no arquivo
-                    arq.escrever(ferramentaAmaldicoada);
+                    arq.escrever(dezSombras);
                     break;
                 case 2:
                     // Executar o método de leitura
                     System.out.println("INFORMAÇÕES DAS FERRAMENTAS");
-                    for (int i = 0; i < ferramentas.size(); i++) {
-                        ferramentas.get(i).mostrarInfos();
+                    for (int i = 0; i < sombras.size(); i++) {
+                        sombras.get(i).ferramentaAmaldicoada.mostrarInfos();
                     }
                     break;
                 case 3:
                     String nomeBusca;
                     System.out.println("Nome da ferramenta a ser buscada: ");
                     nomeBusca = sc.nextLine();
-                    for (int i = 0; i < ferramentas.size(); i++) {
-                        if (ferramentas.get(i).getNome().equals(nomeBusca)) {
+                    for (int i = 0; i < sombras.size(); i++) {
+                        if (sombras.get(i).ferramentaAmaldicoada.getNome().equals(nomeBusca)) {
                             System.out.println("Nome: ");
-                            ferramentas.get(i).setNome(sc.nextLine());
+                            sombras.get(i).ferramentaAmaldicoada.setNome(sc.nextLine());
                             System.out.println("Efeito: ");
-                            ferramentas.get(i).setEfeito(sc.nextLine());
+                            sombras.get(i).ferramentaAmaldicoada.setEfeito(sc.nextLine());
                             try {
                                 System.out.println("Nível (Desconhecido, 4, 3, 2, 1, Especial): ");
-                                ferramentas.get(i).setNivel(sc.nextLine());
-                                if (!ferramentaAmaldicoada.getNivel().equals("Desconhecido") && !ferramentaAmaldicoada.getNivel().equals("4") && !ferramentaAmaldicoada.getNivel().equals("3") && !ferramentaAmaldicoada.getNivel().equals("2") && !ferramentaAmaldicoada.getNivel().equals("1") && !ferramentaAmaldicoada.getNivel().equals("Especial")) {
+                                sombras.get(i).ferramentaAmaldicoada.setNivel(sc.nextLine());
+                                if (!dezSombras.ferramentaAmaldicoada.getNivel().equals("Desconhecido") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("4") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("3") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("2") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("1") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("Especial")) {
                                     throw new DadoInvalidoException();
                                 }
                             } catch (java.lang.Exception e) {

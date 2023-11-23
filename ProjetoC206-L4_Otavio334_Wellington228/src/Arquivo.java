@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 public class Arquivo {
-    public void escrever(FerramentaAmaldicoada ferramentaAmaldicoada) {
+    public void escrever(DezSombras sombra) {
         // Importando as classes que nos permitirão escrever no Arquivo
         OutputStream os = null;
         OutputStreamWriter osw = null;
@@ -20,10 +20,10 @@ public class Arquivo {
 
             // Escrevendo os dados no arquivo
             bw.write("--- SOMBRA ---\n"); // Flag
-            bw.write(ferramentaAmaldicoada.getNome()+"\n");
-            bw.write(ferramentaAmaldicoada.getEfeito()+"\n");
-            bw.write(ferramentaAmaldicoada.getNivel()+"\n");
-            bw.write(ferramentaAmaldicoada.getId()+"\n");
+            bw.write(sombra.getNome()+"\n");
+            bw.write(sombra.getEfeito()+"\n");
+            bw.write(sombra.getNivel()+"\n");
+            bw.write(sombra.getId()+"\n");
 
         } catch (IOException e) {
             System.out.println("ERRO: " + e);
@@ -38,9 +38,9 @@ public class Arquivo {
 
     }
 
-    public ArrayList<FerramentaAmaldicoada> ler() {
+    public ArrayList<DezSombras> ler() {
         // Criando array list que armazena as ferramentas encontradas no arquivo
-        ArrayList<FerramentaAmaldicoada> encontreiNoArquivo = new ArrayList<>();
+        ArrayList<DezSombras> encontreiNoArquivo = new ArrayList<>();
 
         // Estruturas que servirão para a leitura dos dados
         InputStream is = null;

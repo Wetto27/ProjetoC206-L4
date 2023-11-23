@@ -1,13 +1,8 @@
-public class FerramentaAmaldicoada extends Comparable<FerramentaAmaldicoada> {
+public class FerramentaAmaldicoada  {
     private String nome;
     private String efeito;
     private String nivel;
     private int id;
-
-    @Override
-    public int compareTo(FerramentaAmaldicoada ferramentaAmaldicoadaComparado) {
-        return 0;
-    }
 
     public void mostrarInfos(){
         System.out.println("Nome: "+nome);

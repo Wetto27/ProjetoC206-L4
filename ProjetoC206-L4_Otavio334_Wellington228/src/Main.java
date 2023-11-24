@@ -1,14 +1,17 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
 
         // Criando um objeto de Arquivo
         ArquivoShikigami arq1 = new ArquivoShikigami();
         ArquivoFerramenta arq2 = new ArquivoFerramenta();
+
+        ProcuraFerramenta procura = new ProcuraFerramenta();
 
         //Criando objetos de DezSombras
         DezSombras dezSombras = new DezSombras();
@@ -89,7 +92,7 @@ public class Main {
             // Menu de informações
             System.out.println("--- BEM VINDO AO MENU DAS 10 SOMBRAS ---");
             System.out.println("1 - Colocar ferramenta");
-            System.out.println("2 - Mostrar ferramenta");
+            System.out.println("2 - Mostrar ferramentas");
             System.out.println("3 - Editar ferramenta");
             System.out.println("4 - Remover ferramenta");
             System.out.println("5 - Sair");
@@ -126,10 +129,11 @@ public class Main {
                     }
                     break;
                 case 3:
-
                     break;
                 case 4:
-
+                    System.out.println("Ferramenta a ser removida: ");
+                        String remover = sc.nextLine();
+                        procura.removeRecord(remover, 1, ",");
                     break;
                 case 5:
                     // Sair do menu

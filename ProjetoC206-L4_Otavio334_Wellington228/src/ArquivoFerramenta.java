@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
+
 public class ArquivoFerramenta {
     public void escrever(DezSombras sombra) {
         // Importando as classes que nos permitirão escrever no Arquivo
@@ -20,9 +21,9 @@ public class ArquivoFerramenta {
 
             // Escrevendo os dados no arquivo
             bw.write("--- FERRAMENTA ---\n"); // Flag
-            bw.write(sombra.ferramentaAmaldicoada.getNome()+"\n");
-            bw.write(sombra.ferramentaAmaldicoada.getNivel()+"\n");
-            bw.write(sombra.ferramentaAmaldicoada.getEfeito()+"\n");
+            bw.write("Nome:" + sombra.ferramentaAmaldicoada.getNome() + ", ");
+            bw.write("Nivel:" + sombra.ferramentaAmaldicoada.getNivel() + ", ");
+            bw.write("Efeito:" + sombra.ferramentaAmaldicoada.getEfeito());
 
         } catch (IOException e) {
             System.out.println("ERRO: " + e);
@@ -61,7 +62,6 @@ public class ArquivoFerramenta {
             while (linhaLer != null) {
                 // Verificando se encontramos a flag que indica o início de um livro
                 if (linhaLer.contains("--- FERRAMENTA ---")) {
-
                     // Criando um objeto auxiliar de Livro
                     DezSombras auxFerramenta = new DezSombras();
                     auxFerramenta.ferramentaAmaldicoada.setNome(br.readLine());
@@ -74,13 +74,13 @@ public class ArquivoFerramenta {
                 // Passando para a próxima linha
                 linhaLer = br.readLine();
             }
-        }catch(java.lang.Exception e){
-            System.out.println("ERRO: "+e);
-        }finally{
-            try{
+        } catch (java.lang.Exception e) {
+            System.out.println("ERRO: " + e);
+        } finally {
+            try {
                 br.close();
-            }catch(java.lang.Exception e){
-                System.out.println("ERRO: "+e);
+            } catch (java.lang.Exception e) {
+                System.out.println("ERRO: " + e);
             }
         }
         return encontreiNoArquivo;

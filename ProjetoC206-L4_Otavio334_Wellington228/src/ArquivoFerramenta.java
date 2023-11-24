@@ -23,7 +23,7 @@ public class ArquivoFerramenta {
             bw.write("--- FERRAMENTA ---\n"); // Flag
             bw.write("Nome:" + sombra.ferramentaAmaldicoada.getNome() + ", ");
             bw.write("Nivel:" + sombra.ferramentaAmaldicoada.getNivel() + ", ");
-            bw.write("Efeito:" + sombra.ferramentaAmaldicoada.getEfeito());
+            bw.write("Efeito:" + sombra.ferramentaAmaldicoada.getEfeito() + "\n");
 
         } catch (IOException e) {
             System.out.println("ERRO: " + e);

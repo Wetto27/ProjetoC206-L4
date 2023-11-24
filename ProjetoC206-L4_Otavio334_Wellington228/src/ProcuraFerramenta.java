@@ -1,7 +1,7 @@
 import java.io.*;
 
 public class ProcuraFerramenta {
-    public static void removeRecord(String removeTerm, int positionOfTerm, String delimiter) {
+    public static void removeFerramenta(String removeTerm, int positionOfTerm, String delimiter) {
         String termoRemocao = "Nome:" + removeTerm;
         int position = positionOfTerm - 1;
         String filePath = "SombraFerramenta.txt";

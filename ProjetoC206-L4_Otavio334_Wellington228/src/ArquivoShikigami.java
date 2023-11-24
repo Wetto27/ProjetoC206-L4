@@ -7,7 +7,6 @@ public class ArquivoShikigami {
         OutputStreamWriter osw = null;
         BufferedWriter bw = null;
 
-
         try {
             // Recebe o nome do arquivo
             os = new FileOutputStream("SombraShikigami.txt", true); // Arquivo
@@ -21,9 +20,9 @@ public class ArquivoShikigami {
             // Escrevendo os dados no arquivo
             bw.write("--- SHIKIGAMI ---\n"); // Flag
             bw.write(sombra.shikigami.getNome()+"\n");
-            bw.write(sombra.shikigami.isExorcizado()+"\n");
-            bw.write(sombra.shikigami.isTotalidade()+"\n");
-            bw.write(sombra.shikigami.isDestruido()+"\n");
+            bw.write(sombra.shikigami.getExorcizado()+"\n");
+            bw.write(sombra.shikigami.getTotalidade()+"\n");
+            bw.write(sombra.shikigami.getDestruido()+"\n");
 
         } catch (IOException e) {
             System.out.println("ERRO: " + e);
@@ -66,9 +65,9 @@ public class ArquivoShikigami {
                     // Criando um objeto auxiliar de Livro
                     DezSombras auxShikigami = new DezSombras();
                     auxShikigami.shikigami.setNome(br.readLine());
-                    auxShikigami.shikigami.setExorcizado(Boolean.parseBoolean(br.readLine()));
-                    auxShikigami.shikigami.setTotalidade(Boolean.parseBoolean(br.readLine()));
-                    auxShikigami.shikigami.setDestruido(Boolean.parseBoolean(br.readLine()));
+                    auxShikigami.shikigami.setExorcizado(br.readLine());
+                    auxShikigami.shikigami.setTotalidade(br.readLine());
+                    auxShikigami.shikigami.setDestruido(br.readLine());
 
                     // Adicionando a ferramenta ao arrayList, para informar que encontrei a ferramenta
                     encontreiNoArquivo.add(auxShikigami);
@@ -86,5 +85,24 @@ public class ArquivoShikigami {
             }
         }
         return encontreiNoArquivo;
+    }
+
+    public void reescrever(DezSombras sombra, String nomeShikigami) throws IOException {
+        ArrayList<DezSombras> sombras = ler();
+        FileWriter writer = new FileWriter("SombraShikigami.txt");
+
+        for (DezSombras s : sombras) {
+            if (s.shikigami.getNome().equalsIgnoreCase(nomeShikigami)) {
+                // Se for o shikigami a ser editado, atualize as informações
+                s = sombra;
+            }
+            writer.write("--- SHIKIGAMI ---\n");
+            writer.write(s.shikigami.getNome() + "\n");
+            writer.write(s.shikigami.getExorcizado() + "\n");
+            writer.write(s.shikigami.getTotalidade() + "\n");
+            writer.write(s.shikigami.getDestruido() + "\n");
+        }
+
+        writer.close();
     }
 }

@@ -5,7 +5,6 @@ public class FerramentaAmaldicoada  {
 
     public void mostrarInfos(){
         System.out.println(nome);
-        System.out.println(" ");
     }
 
     public String getNome() {

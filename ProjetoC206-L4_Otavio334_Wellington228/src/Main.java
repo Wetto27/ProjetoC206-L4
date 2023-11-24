@@ -1,3 +1,5 @@
+import exceptions.DadoInvalidoException;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -28,45 +30,45 @@ public class Main {
 
         // Criando shikigamis
         dezSombras1.shikigami.setNome("Cães divinos");
-        dezSombras1.shikigami.setExorcizado(true);
-        dezSombras1.shikigami.setTotalidade(true);
-        dezSombras1.shikigami.setDestruido(false);
+        dezSombras1.shikigami.setExorcizado("Sim");
+        dezSombras1.shikigami.setTotalidade("Sim");
+        dezSombras1.shikigami.setDestruido("Não");
         dezSombras2.shikigami.setNome("Nue");
-        dezSombras2.shikigami.setExorcizado(false);
-        dezSombras2.shikigami.setTotalidade(false);
-        dezSombras2.shikigami.setDestruido(false);
+        dezSombras2.shikigami.setExorcizado("Não");
+        dezSombras2.shikigami.setTotalidade("Não");
+        dezSombras2.shikigami.setDestruido("Não");
         dezSombras3.shikigami.setNome("Sapo");
-        dezSombras3.shikigami.setExorcizado(false);
-        dezSombras3.shikigami.setTotalidade(false);
-        dezSombras3.shikigami.setDestruido(false);
+        dezSombras3.shikigami.setExorcizado("Não");
+        dezSombras3.shikigami.setTotalidade("Não");
+        dezSombras3.shikigami.setDestruido("Não");
         dezSombras4.shikigami.setNome("Orochi");
-        dezSombras4.shikigami.setExorcizado(false);
-        dezSombras4.shikigami.setTotalidade(false);
-        dezSombras4.shikigami.setDestruido(false);
+        dezSombras4.shikigami.setExorcizado("Não");
+        dezSombras4.shikigami.setTotalidade("Não");
+        dezSombras4.shikigami.setDestruido("Não");
         dezSombras5.shikigami.setNome("Elefante abundante");
-        dezSombras5.shikigami.setExorcizado(false);
-        dezSombras5.shikigami.setTotalidade(false);
-        dezSombras5.shikigami.setDestruido(false);
+        dezSombras5.shikigami.setExorcizado("Não");
+        dezSombras5.shikigami.setTotalidade("Não");
+        dezSombras5.shikigami.setDestruido("Não");
         dezSombras6.shikigami.setNome("Fuga do coelho");
-        dezSombras6.shikigami.setExorcizado(false);
-        dezSombras6.shikigami.setTotalidade(false);
-        dezSombras6.shikigami.setDestruido(false);
+        dezSombras6.shikigami.setExorcizado("Não");
+        dezSombras6.shikigami.setTotalidade("Não");
+        dezSombras6.shikigami.setDestruido("Não");
         dezSombras7.shikigami.setNome("Cervo circular");
-        dezSombras7.shikigami.setExorcizado(false);
-        dezSombras7.shikigami.setTotalidade(false);
-        dezSombras7.shikigami.setDestruido(false);
+        dezSombras7.shikigami.setExorcizado("Não");
+        dezSombras7.shikigami.setTotalidade("Não");
+        dezSombras7.shikigami.setDestruido("Não");
         dezSombras8.shikigami.setNome("Tigre mórbido");
-        dezSombras8.shikigami.setExorcizado(false);
-        dezSombras8.shikigami.setTotalidade(false);
-        dezSombras8.shikigami.setDestruido(false);
+        dezSombras8.shikigami.setExorcizado("Não");
+        dezSombras8.shikigami.setTotalidade("Não");
+        dezSombras8.shikigami.setDestruido("Não");
         dezSombras9.shikigami.setNome("Touro perfurante");
-        dezSombras9.shikigami.setExorcizado(false);
-        dezSombras9.shikigami.setTotalidade(false);
-        dezSombras9.shikigami.setDestruido(false);
+        dezSombras9.shikigami.setExorcizado("Não");
+        dezSombras9.shikigami.setTotalidade("Não");
+        dezSombras9.shikigami.setDestruido("Não");
         dezSombras10.shikigami.setNome("Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga");
-        dezSombras10.shikigami.setExorcizado(false);
-        dezSombras10.shikigami.setTotalidade(false);
-        dezSombras10.shikigami.setDestruido(false);
+        dezSombras10.shikigami.setExorcizado("Não");
+        dezSombras10.shikigami.setTotalidade("Não");
+        dezSombras10.shikigami.setDestruido("Não");
 
         // Escrevendo os shikigamis no arquivo
         arq1.escrever(dezSombras1);
@@ -93,13 +95,14 @@ public class Main {
             System.out.println("--- BEM VINDO AO MENU DAS 10 SOMBRAS ---");
             System.out.println("1 - Colocar ferramenta");
             System.out.println("2 - Mostrar ferramentas");
-            System.out.println("3 - Editar ferramenta");
-            System.out.println("4 - Remover ferramenta");
+            System.out.println("3 - Remover ferramenta");
+            System.out.println("4 - Mostrar shikigamis");
             System.out.println("5 - Sair");
 
             int op = sc.nextInt();
             sc.nextLine();
-            ArrayList<DezSombras> sombras = arq2.ler();
+            ArrayList<DezSombras> sombraShikigami = arq1.ler();
+            ArrayList<DezSombras> sombraFerramenta = arq2.ler();
             // Menu
             switch (op) {
 
@@ -124,16 +127,20 @@ public class Main {
                 case 2:
                     // Executar o método de leitura
                     System.out.println("INFORMAÇÕES DAS FERRAMENTAS");
-                    for (int i = 0; i < sombras.size(); i++) {
-                        sombras.get(i).ferramentaAmaldicoada.mostrarInfos();
+                    for (int i = 0; i < sombraFerramenta.size(); i++) {
+                        sombraFerramenta.get(i).ferramentaAmaldicoada.mostrarInfos();
                     }
                     break;
                 case 3:
+                    System.out.println("Ferramenta a ser removida: ");
+                    String remover = sc.nextLine();
+                    procura.removeRecord(remover, 1, ",");
                     break;
                 case 4:
-                    System.out.println("Ferramenta a ser removida: ");
-                        String remover = sc.nextLine();
-                        procura.removeRecord(remover, 1, ",");
+                    System.out.println("SHIKIGAMIS");
+                    for (int i = 0; i < sombraShikigami.size(); i++) {
+                        sombraShikigami.get(i).shikigami.mostrarInfos();
+                    }
                     break;
                 case 5:
                     // Sair do menu

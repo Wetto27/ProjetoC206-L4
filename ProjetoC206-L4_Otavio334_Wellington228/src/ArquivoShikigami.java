@@ -87,7 +87,7 @@ public class ArquivoShikigami {
         return encontreiNoArquivo;
     }
 
-    public void reescrever(DezSombras sombra, String nomeShikigami) throws IOException {
+    public void reescreverEditar(DezSombras sombra, String nomeShikigami) throws IOException {
         ArrayList<DezSombras> sombras = ler();
         FileWriter writer = new FileWriter("SombraShikigami.txt");
 

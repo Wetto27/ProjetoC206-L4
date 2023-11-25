@@ -87,7 +87,7 @@ public class ArquivoFerramenta {
     }
 
     // Método para reescrever a lista de ferramentas no arquivo
-    public void reescreverLista(ArrayList<DezSombras> listaFerramentas) {
+    public void reescreverRemover(ArrayList<DezSombras> listaFerramentas) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("SombraFerramenta.txt"))) {
             for (DezSombras dezSombras : listaFerramentas) {
                 writer.write("--- FERRAMENTA ---");

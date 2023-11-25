@@ -4,9 +4,9 @@ public class FerramentaAmaldicoada  {
     private String nivel;
 
     public void mostrarInfos(){
-        System.out.println(nome);
-        System.out.println(efeito);
-        System.out.println(nivel + "\n");
+        System.out.println("Nome: " + nome);
+        System.out.println("Efeito: " + efeito);
+        System.out.println("Nivel: " + nivel + "\n");
     }
 
     public String getNome() {

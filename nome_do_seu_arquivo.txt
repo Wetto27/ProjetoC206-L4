@@ -1,5 +1,0 @@
---- FERRAMENTA ---
-Martelo
-3
-Pao
---- FERRAMENTA ---

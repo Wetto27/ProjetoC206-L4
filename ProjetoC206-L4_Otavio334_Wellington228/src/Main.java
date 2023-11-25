@@ -13,9 +13,6 @@ public class Main {
         ArquivoShikigami arq1 = new ArquivoShikigami();
         ArquivoFerramenta arq2 = new ArquivoFerramenta();
 
-        ProcuraFerramenta procuraFerramenta1 = new ProcuraFerramenta();
-        ProcuraShikigami procuraShikigami1 = new ProcuraShikigami();
-
         //Criando objetos de DezSombras
         DezSombras dezSombras = new DezSombras();
         DezSombras dezSombras1 = new DezSombras();
@@ -192,7 +189,7 @@ public class Main {
 
                     // Reescrevendo o arquivo após a remoção
                     if (ferramentaEncontrada) {
-                        arq2.reescreverLista(sombraFerramenta);
+                        arq2.reescreverRemover(sombraFerramenta);
                     } else {
                         System.out.println("Ferramenta não encontrada.");
                     }
@@ -234,7 +231,7 @@ public class Main {
                             } else System.out.println("input invalido!");
 
                             // Escrever as mudanças no arquivo
-                            arq1.reescrever(sombra, nomeShikigami);
+                            arq1.reescreverEditar(sombra, nomeShikigami);
                             System.out.println("Shikigami '" + nomeShikigami + "' atualizado com sucesso!");
                             break;
                         }

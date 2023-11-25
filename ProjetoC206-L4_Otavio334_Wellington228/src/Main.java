@@ -70,45 +70,45 @@ public class Main {
         dezSombras10.shikigami.setExorcizado("nao");
         dezSombras10.shikigami.setTotalidade("nao");
         dezSombras10.shikigami.setDestruido("nao");
-        dezSombras1.shikigami.setExorcizado("Sim");
-        dezSombras1.shikigami.setTotalidade("Sim");
-        dezSombras1.shikigami.setDestruido("Não");
+        dezSombras1.shikigami.setExorcizado("sim");
+        dezSombras1.shikigami.setTotalidade("sim");
+        dezSombras1.shikigami.setDestruido("nao");
         dezSombras2.shikigami.setNome("Nue");
-        dezSombras2.shikigami.setExorcizado("Não");
-        dezSombras2.shikigami.setTotalidade("Não");
-        dezSombras2.shikigami.setDestruido("Não");
+        dezSombras2.shikigami.setExorcizado("nao");
+        dezSombras2.shikigami.setTotalidade("nao");
+        dezSombras2.shikigami.setDestruido("nao");
         dezSombras3.shikigami.setNome("Sapo");
-        dezSombras3.shikigami.setExorcizado("Não");
-        dezSombras3.shikigami.setTotalidade("Não");
-        dezSombras3.shikigami.setDestruido("Não");
+        dezSombras3.shikigami.setExorcizado("nao");
+        dezSombras3.shikigami.setTotalidade("nao");
+        dezSombras3.shikigami.setDestruido("nao");
         dezSombras4.shikigami.setNome("Orochi");
-        dezSombras4.shikigami.setExorcizado("Não");
-        dezSombras4.shikigami.setTotalidade("Não");
-        dezSombras4.shikigami.setDestruido("Não");
+        dezSombras4.shikigami.setExorcizado("nao");
+        dezSombras4.shikigami.setTotalidade("nao");
+        dezSombras4.shikigami.setDestruido("nao");
         dezSombras5.shikigami.setNome("Elefante abundante");
-        dezSombras5.shikigami.setExorcizado("Não");
-        dezSombras5.shikigami.setTotalidade("Não");
-        dezSombras5.shikigami.setDestruido("Não");
+        dezSombras5.shikigami.setExorcizado("nao");
+        dezSombras5.shikigami.setTotalidade("nao");
+        dezSombras5.shikigami.setDestruido("nao");
         dezSombras6.shikigami.setNome("Fuga do coelho");
-        dezSombras6.shikigami.setExorcizado("Não");
-        dezSombras6.shikigami.setTotalidade("Não");
-        dezSombras6.shikigami.setDestruido("Não");
+        dezSombras6.shikigami.setExorcizado("nao");
+        dezSombras6.shikigami.setTotalidade("nao");
+        dezSombras6.shikigami.setDestruido("nao");
         dezSombras7.shikigami.setNome("Cervo circular");
-        dezSombras7.shikigami.setExorcizado("Não");
-        dezSombras7.shikigami.setTotalidade("Não");
-        dezSombras7.shikigami.setDestruido("Não");
+        dezSombras7.shikigami.setExorcizado("nao");
+        dezSombras7.shikigami.setTotalidade("nao");
+        dezSombras7.shikigami.setDestruido("nao");
         dezSombras8.shikigami.setNome("Tigre mórbido");
-        dezSombras8.shikigami.setExorcizado("Não");
-        dezSombras8.shikigami.setTotalidade("Não");
-        dezSombras8.shikigami.setDestruido("Não");
+        dezSombras8.shikigami.setExorcizado("nao");
+        dezSombras8.shikigami.setTotalidade("nao");
+        dezSombras8.shikigami.setDestruido("nao");
         dezSombras9.shikigami.setNome("Touro perfurante");
-        dezSombras9.shikigami.setExorcizado("Não");
-        dezSombras9.shikigami.setTotalidade("Não");
-        dezSombras9.shikigami.setDestruido("Não");
+        dezSombras9.shikigami.setExorcizado("nao");
+        dezSombras9.shikigami.setTotalidade("nao");
+        dezSombras9.shikigami.setDestruido("nao");
         dezSombras10.shikigami.setNome("Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga");
-        dezSombras10.shikigami.setExorcizado("Não");
-        dezSombras10.shikigami.setTotalidade("Não");
-        dezSombras10.shikigami.setDestruido("Não");
+        dezSombras10.shikigami.setExorcizado("nao");
+        dezSombras10.shikigami.setTotalidade("nao");
+        dezSombras10.shikigami.setDestruido("nao");
 
         // Escrevendo os shikigamis no arquivo
         arq1.escrever(dezSombras1);
@@ -139,7 +139,7 @@ public class Main {
             System.out.println("4 - Mostrar shikigamis");
             System.out.println("5 - Editar Shikigami");
             System.out.println("6 - Sair");
-   
+
 
             int op = sc.nextInt();
             sc.nextLine();
@@ -175,9 +175,27 @@ public class Main {
                     }
                     break;
                 case 3:
-                    System.out.println("Ferramenta a ser removida: ");
-                    String remover = sc.nextLine();
-                    procuraFerramenta1.removeFerramenta(remover, 1, ",");
+                    // Coletando o nome da ferramenta a ser removida
+                    System.out.println("Digite o nome da ferramenta a ser removida: ");
+                    String nomeFerramentaRemover = sc.nextLine();
+
+                    // Procurando e removendo a ferramenta pelo nome
+                    boolean ferramentaEncontrada = false;
+                    for (int i = 0; i < sombraFerramenta.size(); i++) {
+                        if (sombraFerramenta.get(i).ferramentaAmaldicoada.getNome().equalsIgnoreCase(nomeFerramentaRemover)) {
+                            sombraFerramenta.remove(i);
+                            ferramentaEncontrada = true;
+                            System.out.println("Ferramenta '" + nomeFerramentaRemover + "' removida com sucesso!");
+                            break;
+                        }
+                    }
+
+                    // Reescrevendo o arquivo após a remoção
+                    if (ferramentaEncontrada) {
+                        arq2.reescreverLista(sombraFerramenta);
+                    } else {
+                        System.out.println("Ferramenta não encontrada.");
+                    }
                     break;
                 case 4:
                     System.out.println("SHIKIGAMIS");
@@ -223,7 +241,7 @@ public class Main {
                     }
 
                     if (!encontrado) {
-                        System.out.println("Shikigami não encontrado.");
+                        System.out.println("Shikigami nao encontrado.");
                     }
                     break;
                 case 6:

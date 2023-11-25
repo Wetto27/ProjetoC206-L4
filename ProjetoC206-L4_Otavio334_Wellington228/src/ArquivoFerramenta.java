@@ -21,9 +21,9 @@ public class ArquivoFerramenta {
 
             // Escrevendo os dados no arquivo
             bw.write("--- FERRAMENTA ---\n"); // Flag
-            bw.write("Nome:" + sombra.ferramentaAmaldicoada.getNome() + ", ");
-            bw.write("Nivel:" + sombra.ferramentaAmaldicoada.getNivel() + ", ");
-            bw.write("Efeito:" + sombra.ferramentaAmaldicoada.getEfeito() + "\n");
+            bw.write(sombra.ferramentaAmaldicoada.getNome() + "\n");
+            bw.write(sombra.ferramentaAmaldicoada.getNivel() + "\n");
+            bw.write(sombra.ferramentaAmaldicoada.getEfeito() + "\n");
 
         } catch (IOException e) {
             System.out.println("ERRO: " + e);
@@ -84,5 +84,24 @@ public class ArquivoFerramenta {
             }
         }
         return encontreiNoArquivo;
+    }
+
+    // Método para reescrever a lista de ferramentas no arquivo
+    public void reescreverLista(ArrayList<DezSombras> listaFerramentas) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("SombraFerramenta.txt"))) {
+            for (DezSombras dezSombras : listaFerramentas) {
+                writer.write("--- FERRAMENTA ---");
+                writer.newLine();
+                writer.write(dezSombras.ferramentaAmaldicoada.getNome());
+                writer.newLine();
+                writer.write(dezSombras.ferramentaAmaldicoada.getNivel());
+                writer.newLine();
+                writer.write(dezSombras.ferramentaAmaldicoada.getEfeito());
+                writer.newLine();
+            }
+            System.out.println("Arquivo atualizado com sucesso!");
+        } catch (IOException e) {
+            System.out.println("Erro ao reescrever o arquivo: " + e.getMessage());
+        }
     }
 }

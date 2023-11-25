@@ -1,150 +1,700 @@
 --- SHIKIGAMI ---
 Cães divinos
-Sim
-Sim
-Não
+sim
+sim
+nao
 --- SHIKIGAMI ---
 Nue
 sim
-nao
+sim
 sim
 --- SHIKIGAMI ---
 Sapo
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Orochi
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Elefante abundante
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Fuga do coelho
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Cervo circular
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Tigre mórbido
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Touro perfurante
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Cães divinos
-Sim
-Sim
-Não
---- SHIKIGAMI ---
-Nue
+sim
 sim
 nao
-sim
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Sapo
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Orochi
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Elefante abundante
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Fuga do coelho
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Cervo circular
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Tigre mórbido
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Touro perfurante
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Cães divinos
-Sim
-Sim
-Não
---- SHIKIGAMI ---
-Nue
+sim
 sim
 nao
-sim
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Sapo
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Orochi
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Elefante abundante
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Fuga do coelho
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Cervo circular
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Tigre mórbido
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Touro perfurante
-Não
-Não
-Não
+nao
+nao
+nao
 --- SHIKIGAMI ---
 Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
-Não
-Não
-Não
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cães divinos
+sim
+sim
+nao
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Sapo
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Orochi
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Elefante abundante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Fuga do coelho
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cervo circular
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Tigre mórbido
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Touro perfurante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cães divinos
+sim
+sim
+nao
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Sapo
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Orochi
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Elefante abundante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Fuga do coelho
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cervo circular
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Tigre mórbido
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Touro perfurante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cães divinos
+sim
+sim
+nao
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Sapo
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Orochi
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Elefante abundante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Fuga do coelho
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cervo circular
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Tigre mórbido
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Touro perfurante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cães divinos
+sim
+sim
+nao
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Sapo
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Orochi
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Elefante abundante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Fuga do coelho
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cervo circular
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Tigre mórbido
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Touro perfurante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cães divinos
+sim
+sim
+nao
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Sapo
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Orochi
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Elefante abundante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Fuga do coelho
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cervo circular
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Tigre mórbido
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Touro perfurante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cães divinos
+sim
+sim
+nao
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Sapo
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Orochi
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Elefante abundante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Fuga do coelho
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cervo circular
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Tigre mórbido
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Touro perfurante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cães divinos
+sim
+sim
+nao
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Sapo
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Orochi
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Elefante abundante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Fuga do coelho
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cervo circular
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Tigre mórbido
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Touro perfurante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cães divinos
+sim
+sim
+nao
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Sapo
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Orochi
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Elefante abundante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Fuga do coelho
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cervo circular
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Tigre mórbido
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Touro perfurante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cães divinos
+sim
+sim
+nao
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Sapo
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Orochi
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Elefante abundante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Fuga do coelho
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cervo circular
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Tigre mórbido
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Touro perfurante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cães divinos
+sim
+sim
+nao
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Sapo
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Orochi
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Elefante abundante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Fuga do coelho
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cervo circular
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Tigre mórbido
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Touro perfurante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cães divinos
+sim
+sim
+nao
+--- SHIKIGAMI ---
+Nue
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Sapo
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Orochi
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Elefante abundante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Fuga do coelho
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Cervo circular
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Tigre mórbido
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Touro perfurante
+nao
+nao
+nao
+--- SHIKIGAMI ---
+Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga
+nao
+nao
+nao

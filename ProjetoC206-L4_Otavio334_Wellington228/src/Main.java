@@ -2,6 +2,7 @@ import exceptions.DadoInvalidoException;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -125,8 +126,6 @@ public class Main {
         // Controladora do menu
         boolean executando = true;
 
-        int id = 0;
-
         while (executando) {
             // Menu de informações
             System.out.println("--- BEM VINDO AO MENU DAS 10 SOMBRAS ---");
@@ -141,37 +140,35 @@ public class Main {
             int op = sc.nextInt();
             sc.nextLine();
             ArrayList<DezSombras> sombraShikigami = arq1.ler();
-            ArrayList<DezSombras> sombras = arq2.ler();
             ArrayList<DezSombras> sombraFerramenta = arq2.ler();
             // Menu
             switch (op) {
-
-                case 1:
+                case 1 -> {
                     // Coletando as informações da ferramenta
                     System.out.println("Nome: ");
                     dezSombras.ferramentaAmaldicoada.setNome(sc.nextLine());
                     try {
-                        System.out.println("Nível (Desconhecido, 4, 3, 2, 1, Especial): ");
+                        System.out.println("Nível (4, 3, 2, 1, Especial): ");
                         dezSombras.ferramentaAmaldicoada.setNivel(sc.nextLine());
-                        if (!dezSombras.ferramentaAmaldicoada.getNivel().equals("Desconhecido") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("4") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("3") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("2") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("1") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("Especial")) {
+                        if (!dezSombras.ferramentaAmaldicoada.getNivel().equals("4") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("3") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("2") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("1") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("Especial")) {
                             throw new DadoInvalidoException();
                         }
-                    } catch (java.lang.Exception e) {
+                    } catch (Exception e) {
                         break; // Parando a execução de salvar os valores
                     }
                     System.out.println("Efeito: ");
                     dezSombras.ferramentaAmaldicoada.setEfeito(sc.nextLine());
                     // Escrevendo a ferramenta no arquivo
                     arq2.escrever(dezSombras);
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     // Executar o método de leitura
                     System.out.println("INFORMAÇÕES DAS FERRAMENTAS");
-                    for (int i = 0; i < sombraFerramenta.size(); i++) {
-                        sombraFerramenta.get(i).ferramentaAmaldicoada.mostrarInfos();
+                    for (DezSombras sombras : sombraFerramenta) {
+                        sombras.ferramentaAmaldicoada.mostrarInfos();
                     }
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     // Coletando o nome da ferramenta a ser removida
                     System.out.println("Digite o nome da ferramenta a ser removida: ");
                     String nomeFerramentaRemover = sc.nextLine();
@@ -193,14 +190,14 @@ public class Main {
                     } else {
                         System.out.println("Ferramenta não encontrada.");
                     }
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     System.out.println("SHIKIGAMIS");
-                    for (int i = 0; i < sombraShikigami.size(); i++) {
-                        sombraShikigami.get(i).shikigami.mostrarInfos();
+                    for (DezSombras sombras : sombraShikigami) {
+                        sombras.shikigami.mostrarInfos();
                     }
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     // Solicitar o nome do shikigami a ser editado
                     System.out.println("Digite o nome do Shikigami a ser editado: ");
                     String nomeShikigami = sc.nextLine();
@@ -236,18 +233,22 @@ public class Main {
                             break;
                         }
                     }
-
                     if (!encontrado) {
                         System.out.println("Shikigami nao encontrado.");
                     }
-                    break;
-                case 6:
+                }
+                case 6 -> {
+                    Collections.sort(sombraFerramenta);
+                    // mostra as ferramentas por ordem de nivel
+                    System.out.println("INFORMAÇÕES DAS FERRAMENTAS");
+                    for (DezSombras sombras : sombraFerramenta) {
+                        sombras.ferramentaAmaldicoada.mostrarInfos();
+                    }
+                }
+                case 7 ->
                     // Sair do menu
-                    executando = false;
-                    break;
-                default:
-                    System.out.println("Opção inválida");
-                    break;
+                        executando = false;
+                default -> System.out.println("Opção inválida");
             }
         }
     }

@@ -1,4 +1,4 @@
-public class DezSombras {
+public class DezSombras{
 
     Shikigami shikigami;
     FerramentaAmaldicoada ferramentaAmaldicoada;

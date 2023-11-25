@@ -1,4 +1,4 @@
-public class FerramentaAmaldicoada  {
+public class FerramentaAmaldicoada implements Comparable<FerramentaAmaldicoada>{
     private String nome;
     private String efeito;
     private String nivel;
@@ -7,6 +7,11 @@ public class FerramentaAmaldicoada  {
         System.out.println("Nome: " + nome);
         System.out.println("Efeito: " + efeito);
         System.out.println("Nivel: " + nivel + "\n");
+    }
+
+    @Override
+    public int compareTo(FerramentaAmaldicoada ferramenta) {
+        return this.nivel.compareTo(ferramenta.getNivel());
     }
 
     public String getNome() {

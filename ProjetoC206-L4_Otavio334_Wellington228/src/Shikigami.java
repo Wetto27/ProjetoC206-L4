@@ -7,7 +7,7 @@ public class Shikigami {
 
     public void mostrarInfos(){
         System.out.println("Nome: "+nome);
-        System.out.println("Efeito: "+exorcizado);
+        System.out.println("Exorcizado: "+exorcizado);
         System.out.println("Totalidade: "+totalidade);
         System.out.println("Destruido: "+destruido);
         System.out.println(" ");

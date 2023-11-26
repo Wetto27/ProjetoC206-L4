@@ -1,8 +1,6 @@
-import exceptions.DadoInvalidoException;
-
+import exceptions.NivelInvalidoException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -10,6 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
 
+        FerramentaAmaldicoada ferramenta = new FerramentaAmaldicoada();
         // Criando um objeto de Arquivo
         ArquivoShikigami arq1 = new ArquivoShikigami();
         ArquivoFerramenta arq2 = new ArquivoFerramenta();
@@ -29,84 +28,46 @@ public class Main {
 
         // Criando shikigamis
         dezSombras1.shikigami.setNome("Cães divinos");
-        dezSombras1.shikigami.setExorcizado("sim");
-        dezSombras1.shikigami.setTotalidade("sim");
-        dezSombras1.shikigami.setDestruido("nao");
+        dezSombras1.shikigami.setExorcizado("Sim");
+        dezSombras1.shikigami.setTotalidade("Sim");
+        dezSombras1.shikigami.setDestruido("Não");
         dezSombras2.shikigami.setNome("Nue");
-        dezSombras2.shikigami.setExorcizado("nao");
-        dezSombras2.shikigami.setTotalidade("nao");
-        dezSombras2.shikigami.setDestruido("nao");
+        dezSombras2.shikigami.setExorcizado("Não");
+        dezSombras2.shikigami.setTotalidade("Não");
+        dezSombras2.shikigami.setDestruido("Não");
         dezSombras3.shikigami.setNome("Sapo");
-        dezSombras3.shikigami.setExorcizado("nao");
-        dezSombras3.shikigami.setTotalidade("nao");
-        dezSombras3.shikigami.setDestruido("nao");
+        dezSombras3.shikigami.setExorcizado("Não");
+        dezSombras3.shikigami.setTotalidade("Não");
+        dezSombras3.shikigami.setDestruido("Não");
         dezSombras4.shikigami.setNome("Orochi");
-        dezSombras4.shikigami.setExorcizado("nao");
-        dezSombras4.shikigami.setTotalidade("nao");
-        dezSombras4.shikigami.setDestruido("nao");
+        dezSombras4.shikigami.setExorcizado("Não");
+        dezSombras4.shikigami.setTotalidade("Não");
+        dezSombras4.shikigami.setDestruido("Não");
         dezSombras5.shikigami.setNome("Elefante abundante");
-        dezSombras5.shikigami.setExorcizado("nao");
-        dezSombras5.shikigami.setTotalidade("nao");
-        dezSombras5.shikigami.setDestruido("nao");
+        dezSombras5.shikigami.setExorcizado("Não");
+        dezSombras5.shikigami.setTotalidade("Não");
+        dezSombras5.shikigami.setDestruido("Não");
         dezSombras6.shikigami.setNome("Fuga do coelho");
-        dezSombras6.shikigami.setExorcizado("nao");
-        dezSombras6.shikigami.setTotalidade("nao");
-        dezSombras6.shikigami.setDestruido("nao");
+        dezSombras6.shikigami.setExorcizado("Não");
+        dezSombras6.shikigami.setTotalidade("Não");
+        dezSombras6.shikigami.setDestruido("Não");
         dezSombras7.shikigami.setNome("Cervo circular");
-        dezSombras7.shikigami.setExorcizado("nao");
-        dezSombras7.shikigami.setTotalidade("nao");
-        dezSombras7.shikigami.setDestruido("nao");
+        dezSombras7.shikigami.setExorcizado("Não");
+        dezSombras7.shikigami.setTotalidade("Não");
+        dezSombras7.shikigami.setDestruido("Não");
         dezSombras8.shikigami.setNome("Tigre mórbido");
-        dezSombras8.shikigami.setExorcizado("nao");
-        dezSombras8.shikigami.setTotalidade("nao");
-        dezSombras8.shikigami.setDestruido("nao");
+        dezSombras8.shikigami.setExorcizado("Não");
+        dezSombras8.shikigami.setTotalidade("Não");
+        dezSombras8.shikigami.setDestruido("Não");
         dezSombras9.shikigami.setNome("Touro perfurante");
-        dezSombras9.shikigami.setExorcizado("nao");
-        dezSombras9.shikigami.setTotalidade("nao");
-        dezSombras9.shikigami.setDestruido("nao");
+        dezSombras9.shikigami.setExorcizado("Não");
+        dezSombras9.shikigami.setTotalidade("Não");
+        dezSombras9.shikigami.setDestruido("Não");
         dezSombras10.shikigami.setNome("Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga");
-        dezSombras10.shikigami.setExorcizado("nao");
-        dezSombras10.shikigami.setTotalidade("nao");
-        dezSombras10.shikigami.setDestruido("nao");
-        dezSombras1.shikigami.setExorcizado("sim");
-        dezSombras1.shikigami.setTotalidade("sim");
-        dezSombras1.shikigami.setDestruido("nao");
-        dezSombras2.shikigami.setNome("Nue");
-        dezSombras2.shikigami.setExorcizado("nao");
-        dezSombras2.shikigami.setTotalidade("nao");
-        dezSombras2.shikigami.setDestruido("nao");
-        dezSombras3.shikigami.setNome("Sapo");
-        dezSombras3.shikigami.setExorcizado("nao");
-        dezSombras3.shikigami.setTotalidade("nao");
-        dezSombras3.shikigami.setDestruido("nao");
-        dezSombras4.shikigami.setNome("Orochi");
-        dezSombras4.shikigami.setExorcizado("nao");
-        dezSombras4.shikigami.setTotalidade("nao");
-        dezSombras4.shikigami.setDestruido("nao");
-        dezSombras5.shikigami.setNome("Elefante abundante");
-        dezSombras5.shikigami.setExorcizado("nao");
-        dezSombras5.shikigami.setTotalidade("nao");
-        dezSombras5.shikigami.setDestruido("nao");
-        dezSombras6.shikigami.setNome("Fuga do coelho");
-        dezSombras6.shikigami.setExorcizado("nao");
-        dezSombras6.shikigami.setTotalidade("nao");
-        dezSombras6.shikigami.setDestruido("nao");
-        dezSombras7.shikigami.setNome("Cervo circular");
-        dezSombras7.shikigami.setExorcizado("nao");
-        dezSombras7.shikigami.setTotalidade("nao");
-        dezSombras7.shikigami.setDestruido("nao");
-        dezSombras8.shikigami.setNome("Tigre mórbido");
-        dezSombras8.shikigami.setExorcizado("nao");
-        dezSombras8.shikigami.setTotalidade("nao");
-        dezSombras8.shikigami.setDestruido("nao");
-        dezSombras9.shikigami.setNome("Touro perfurante");
-        dezSombras9.shikigami.setExorcizado("nao");
-        dezSombras9.shikigami.setTotalidade("nao");
-        dezSombras9.shikigami.setDestruido("nao");
-        dezSombras10.shikigami.setNome("Espada de oito empunhaduras! Princípio da divergência: General divino Mahoraga");
-        dezSombras10.shikigami.setExorcizado("nao");
-        dezSombras10.shikigami.setTotalidade("nao");
-        dezSombras10.shikigami.setDestruido("nao");
+        dezSombras10.shikigami.setExorcizado("Não");
+        dezSombras10.shikigami.setTotalidade("Não");
+        dezSombras10.shikigami.setDestruido("Não");
+
 
         // Escrevendo os shikigamis no arquivo
         arq1.escrever(dezSombras1);
@@ -136,36 +97,35 @@ public class Main {
             System.out.println("5 - Editar Shikigami");
             System.out.println("6 - Sair");
 
-
             int op = sc.nextInt();
             sc.nextLine();
             ArrayList<DezSombras> sombraShikigami = arq1.ler();
-            ArrayList<DezSombras> sombraFerramenta = arq2.ler();
+            ArrayList<FerramentaAmaldicoada> sombraFerramenta = arq2.ler();
             // Menu
             switch (op) {
                 case 1 -> {
                     // Coletando as informações da ferramenta
                     System.out.println("Nome: ");
-                    dezSombras.ferramentaAmaldicoada.setNome(sc.nextLine());
+                    ferramenta.setNome(sc.nextLine());
                     try {
-                        System.out.println("Nível (4, 3, 2, 1, Especial): ");
-                        dezSombras.ferramentaAmaldicoada.setNivel(sc.nextLine());
-                        if (!dezSombras.ferramentaAmaldicoada.getNivel().equals("4") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("3") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("2") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("1") && !dezSombras.ferramentaAmaldicoada.getNivel().equals("Especial")) {
-                            throw new DadoInvalidoException();
+                        System.out.println("Nível (Desconhecido, 4, 3, 2, 1, Especial): ");
+                        ferramenta.setNivel(sc.nextLine());
+                        if (!ferramenta.getNivel().equals("Desconhecido") && !ferramenta.getNivel().equals("4") && !ferramenta.getNivel().equals("3") && !ferramenta.getNivel().equals("2") && !ferramenta.getNivel().equals("1") && !ferramenta.getNivel().equals("Especial")) {
+                            throw new NivelInvalidoException();
                         }
                     } catch (Exception e) {
                         break; // Parando a execução de salvar os valores
                     }
                     System.out.println("Efeito: ");
-                    dezSombras.ferramentaAmaldicoada.setEfeito(sc.nextLine());
+                    ferramenta.setEfeito(sc.nextLine());
                     // Escrevendo a ferramenta no arquivo
-                    arq2.escrever(dezSombras);
+                    arq2.escrever(ferramenta);
                 }
                 case 2 -> {
                     // Executar o método de leitura
                     System.out.println("INFORMAÇÕES DAS FERRAMENTAS");
-                    for (DezSombras sombras : sombraFerramenta) {
-                        sombras.ferramentaAmaldicoada.mostrarInfos();
+                    for (int i = 0; i < sombraFerramenta.size(); i++) {
+                        sombraFerramenta.get(i).mostrarInfos();
                     }
                 }
                 case 3 -> {
@@ -176,7 +136,7 @@ public class Main {
                     // Procurando e removendo a ferramenta pelo nome
                     boolean ferramentaEncontrada = false;
                     for (int i = 0; i < sombraFerramenta.size(); i++) {
-                        if (sombraFerramenta.get(i).ferramentaAmaldicoada.getNome().equalsIgnoreCase(nomeFerramentaRemover)) {
+                        if (sombraFerramenta.get(i).getNome().equalsIgnoreCase(nomeFerramentaRemover)) {
                             sombraFerramenta.remove(i);
                             ferramentaEncontrada = true;
                             System.out.println("Ferramenta '" + nomeFerramentaRemover + "' removida com sucesso!");
@@ -209,21 +169,21 @@ public class Main {
                             encontrado = true;
 
                             // Solicitar as novas informações
-                            System.out.println("Novo status de 'Exorcizado' (sim/nao): ");
+                            System.out.println("Novo status de 'Exorcizado' (Sim/Não): ");
                             String exorcizado = sc.nextLine();
-                            if (exorcizado.equals("sim") || exorcizado.equals("nao")) {
+                            if (exorcizado.equals("Sim") || exorcizado.equals("Não")) {
                                 sombra.shikigami.setExorcizado(exorcizado);
                             } else System.out.println("input invalido!");
 
-                            System.out.println("Novo status de 'Totalidade' (sim/nao): ");
+                            System.out.println("Novo status de 'Totalidade' (Sim/Não): ");
                             String totalidade = sc.nextLine();
-                            if (totalidade.equals("sim") || totalidade.equals("nao")) {
+                            if (totalidade.equals("Sim") || totalidade.equals("Não")) {
                                 sombra.shikigami.setTotalidade(totalidade);
                             } else System.out.println("input invalido!");
 
-                            System.out.println("Novo status de 'Destruido' (sim/nao): ");
+                            System.out.println("Novo status de 'Destruido' (Sim/Não): ");
                             String destruido = sc.nextLine();
-                            if (destruido.equals("sim") || destruido.equals("nao")) {
+                            if (destruido.equals("Sim") || destruido.equals("Não")) {
                                 sombra.shikigami.setDestruido(destruido);
                             } else System.out.println("input invalido!");
 
@@ -234,18 +194,10 @@ public class Main {
                         }
                     }
                     if (!encontrado) {
-                        System.out.println("Shikigami nao encontrado.");
+                        System.out.println("Shikigami não encontrado.");
                     }
                 }
-                case 6 -> {
-                    Collections.sort(sombraFerramenta);
-                    // mostra as ferramentas por ordem de nivel
-                    System.out.println("INFORMAÇÕES DAS FERRAMENTAS");
-                    for (DezSombras sombras : sombraFerramenta) {
-                        sombras.ferramentaAmaldicoada.mostrarInfos();
-                    }
-                }
-                case 7 ->
+                case 6 ->
                     // Sair do menu
                         executando = false;
                 default -> System.out.println("Opção inválida");

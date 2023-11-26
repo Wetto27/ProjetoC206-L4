@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class ArquivoFerramenta {
-    public void escrever(DezSombras sombra) {
+    public void escrever(FerramentaAmaldicoada ferramenta) {
         // Importando as classes que nos permitirão escrever no Arquivo
         OutputStream os = null;
         OutputStreamWriter osw = null;
@@ -21,9 +21,9 @@ public class ArquivoFerramenta {
 
             // Escrevendo os dados no arquivo
             bw.write("--- FERRAMENTA ---\n"); // Flag
-            bw.write(sombra.ferramentaAmaldicoada.getNome() + "\n");
-            bw.write(sombra.ferramentaAmaldicoada.getNivel() + "\n");
-            bw.write(sombra.ferramentaAmaldicoada.getEfeito() + "\n");
+            bw.write(ferramenta.getNome() + "\n");
+            bw.write(ferramenta.getNivel() + "\n");
+            bw.write(ferramenta.getEfeito() + "\n");
 
         } catch (IOException e) {
             System.out.println("ERRO: " + e);
@@ -38,9 +38,9 @@ public class ArquivoFerramenta {
 
     }
 
-    public ArrayList<DezSombras> ler() {
+    public ArrayList<FerramentaAmaldicoada> ler() {
         // Criando array list que armazena as ferramentas encontradas no arquivo
-        ArrayList<DezSombras> encontreiNoArquivo = new ArrayList<>();
+        ArrayList<FerramentaAmaldicoada> encontreiNoArquivo = new ArrayList<>();
 
         // Estruturas que servirão para a leitura dos dados
         InputStream is = null;
@@ -63,10 +63,10 @@ public class ArquivoFerramenta {
                 // Verificando se encontramos a flag que indica o início de um livro
                 if (linhaLer.contains("--- FERRAMENTA ---")) {
                     // Criando um objeto auxiliar de Livro
-                    DezSombras auxFerramenta = new DezSombras();
-                    auxFerramenta.ferramentaAmaldicoada.setNome(br.readLine());
-                    auxFerramenta.ferramentaAmaldicoada.setNivel(br.readLine());
-                    auxFerramenta.ferramentaAmaldicoada.setEfeito(br.readLine());
+                    FerramentaAmaldicoada auxFerramenta = new FerramentaAmaldicoada();
+                    auxFerramenta.setNome(br.readLine());
+                    auxFerramenta.setNivel(br.readLine());
+                    auxFerramenta.setEfeito(br.readLine());
 
                     // Adicionando a ferramenta ao arrayList, para informar que encontrei a ferramenta
                     encontreiNoArquivo.add(auxFerramenta);
@@ -87,16 +87,16 @@ public class ArquivoFerramenta {
     }
 
     // Método para reescrever a lista de ferramentas no arquivo
-    public void reescreverRemover(ArrayList<DezSombras> listaFerramentas) {
+    public void reescreverRemover(ArrayList<FerramentaAmaldicoada> listaFerramentas) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("SombraFerramenta.txt"))) {
-            for (DezSombras dezSombras : listaFerramentas) {
+            for (FerramentaAmaldicoada ferramentaAmaldicoada : listaFerramentas) {
                 writer.write("--- FERRAMENTA ---");
                 writer.newLine();
-                writer.write(dezSombras.ferramentaAmaldicoada.getNome());
+                writer.write(ferramentaAmaldicoada.getNome());
                 writer.newLine();
-                writer.write(dezSombras.ferramentaAmaldicoada.getNivel());
+                writer.write(ferramentaAmaldicoada.getNivel());
                 writer.newLine();
-                writer.write(dezSombras.ferramentaAmaldicoada.getEfeito());
+                writer.write(ferramentaAmaldicoada.getEfeito());
                 writer.newLine();
             }
             System.out.println("Arquivo atualizado com sucesso!");
